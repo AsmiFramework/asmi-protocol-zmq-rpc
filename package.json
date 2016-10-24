@@ -1,0 +1,21 @@
+{
+  "name": "asmi-protocol-zmq-rpc",
+  "version": "0.5.0",
+  "description": "ZeroMQ based communication protocol for all Asmi based services",
+  "main": "asmi-protocol-zmq-rpc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Mahesh Kumar J",
+    "email": "mahesh@maheshj.com",
+    "url": "https://www.maheshj.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AsmiFramework/asmi-protocol-zmq-rpc.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+  }
+}
