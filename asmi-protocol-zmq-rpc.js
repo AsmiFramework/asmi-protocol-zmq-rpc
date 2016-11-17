@@ -4,9 +4,10 @@ var uuid = require('uuid');
 var util = require('util');
 var shortid = require('shortid32');
 
-function AsmiProtocolZMQRPC(modName) {
+function AsmiProtocolZMQRPC(modName, outsideInterface) {
 	this.modName = modName;
 	this.pendingCallbacks = {};
+	this.initServer(outsideInterface);
 }
 
 var p = AsmiProtocolZMQRPC.prototype;
@@ -199,6 +200,6 @@ p.setupSocketMonitoring = function (socket) {
 	socket.monitor();*/
 };
 
-module.exports = exports = function (modName) {
-	return new AsmiProtocolZMQRPC(modName);
+module.exports = exports = function (modName, outsideInterface) {
+	return new AsmiProtocolZMQRPC(modName, outsideInterface);
 };

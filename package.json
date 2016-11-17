@@ -1,6 +1,6 @@
 {
   "name": "asmi-protocol-zmq-rpc",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "ZeroMQ based communication protocol for all Asmi based services",
   "main": "asmi-protocol-zmq-rpc.js",
   "scripts": {
