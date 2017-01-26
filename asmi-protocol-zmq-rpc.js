@@ -117,6 +117,8 @@ p.initClient = function () {
 								var callbackID = "callback." + shortid.generate();
 								callbacks[callbackID] = arguments[key];
 								args.push(callbackID);
+							} else if (arguments[key] == undefined) {
+								args.push("asmi.undefined");
 							} else {
 								args.push(arguments[key]);
 							}
@@ -171,6 +173,8 @@ p.initWorker = function () {
 						})]);
 					};
 				})(arg));
+			} else if (typeof arg == 'string' && arg == "asmi.undefined") {
+				requestArgs.push(undefined);
 			} else {
 				requestArgs.push(arg);
 			}
